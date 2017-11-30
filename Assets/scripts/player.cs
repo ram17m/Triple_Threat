@@ -5,12 +5,11 @@ using UnityEngine;
 public class player : MonoBehaviour {
 
     public float moveSpeed;
-   // private Animator anim;
+    private Animator anim;
 	// Use this for initialization
 	void Start () {
-     //   anim = GetComponent<Animator>();    
-    
-	}
+        anim = GetComponent<Animator>();    
+    	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -19,7 +18,6 @@ public class player : MonoBehaviour {
             transform.Translate(new Vector3(Input.GetAxisRaw("Horizontal") * moveSpeed * Time.deltaTime, 0f, 0f));
         }
 
-       // anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
-      
-	}
+        anim.SetFloat("MoveX", Input.GetAxisRaw("Horizontal"));
+      	}
 }
